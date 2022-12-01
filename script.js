@@ -83,10 +83,10 @@ const secondNum= 5;
 
 const addAsync=new Promise((resolve,reject)=>{
     if(firstNum > secondNum){
-        resolve(`${firstNum} ნაკლებია, ვიდრე ${secondNum}`)
+        resolve(`${firstNum} მეტია, ვიდრე ${secondNum}`)
     }
     else if(firstNum < secondNum){
-        resolve(`${secondNum} მეტია, ვიდრე  ${firstNum}`)
+        resolve(`${firstNum} ნაკლებია, ვიდრე  ${secondNum}`)
     }
     else if(firstNum === secondNum){
         resolve(`${secondNum} უდრის ${firstNum}`)
@@ -110,14 +110,13 @@ const addAsync=new Promise((resolve,reject)=>{
 const addSync = (firstNum,secondNum) => {
     return new Promise((resolve, reject)=>{
         if(firstNum > secondNum){
-                    resolve(`${firstNum} ნაკლებია, ვიდრე ${secondNum}`)
-                }
-                else if(firstNum < secondNum){
-                    resolve(`${secondNum} მეტია, ვიდრე  ${firstNum}`)
-                }
-                else if(firstNum === secondNum){
-                    resolve(`${secondNum} უდრის ${firstNum}`)
-                }
+        resolve(`${firstNum} მეტია, ვიდრე ${secondNum}`)
+    }
+    else if(firstNum < secondNum){
+        resolve(`${firstNum} ნაკლებია, ვიდრე  ${secondNum}`)
+    }
+    else if(firstNum === secondNum){
+        resolve(`${secondNum} უდრის ${firstNum}`)
                 else{
                     reject("sorry, SMTH went wrong!")
                 }
