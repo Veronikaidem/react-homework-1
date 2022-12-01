@@ -98,3 +98,45 @@ const addAsync=new Promise((resolve,reject)=>{
 
 .then((resolve)=>console.log(resolve))
 .catch((error)=>console.log(error))
+
+
+
+//EDITED VERSION HOMEWORK 4 
+
+
+
+
+const firstNum = 5;
+const secondNum= 5;
+
+// const firstNum = 0;
+// const secondNum= 0;
+// const firstNum = 13;
+// const secondNum= 8;
+
+// const firstNum =90;
+// const secondNum=19;
+
+// const firstNum =90;
+// const secondNum=197;
+
+const addSync = (a,b) => {
+    return new Promise((resolve, reject)=>{
+        if(firstNum > secondNum){
+                    resolve(`${firstNum} ნაკლებია, ვიდრე ${secondNum}`)
+                }
+                else if(firstNum < secondNum){
+                    resolve(`${secondNum} მეტია, ვიდრე  ${firstNum}`)
+                }
+                else if(firstNum === secondNum){
+                    resolve(`${secondNum} უდრის ${firstNum}`)
+                }
+                else{
+                    reject("sorry, SMTH went wrong!")
+                }
+            })
+            
+            .then((resolve)=>console.log(resolve))
+            .catch((error)=>console.log(error))
+    
+}
