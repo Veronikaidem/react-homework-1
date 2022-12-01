@@ -106,21 +106,8 @@ const addAsync=new Promise((resolve,reject)=>{
 
 
 
-const firstNum = 5;
-const secondNum= 5;
 
-// const firstNum = 0;
-// const secondNum= 0;
-// const firstNum = 13;
-// const secondNum= 8;
-
-// const firstNum =90;
-// const secondNum=19;
-
-// const firstNum =90;
-// const secondNum=197;
-
-const addSync = (a,b) => {
+const addSync = (firstNum,secondNum) => {
     return new Promise((resolve, reject)=>{
         if(firstNum > secondNum){
                     resolve(`${firstNum} ნაკლებია, ვიდრე ${secondNum}`)
@@ -140,3 +127,4 @@ const addSync = (a,b) => {
             .catch((error)=>console.log(error))
     
 }
+addSync(5,10);
